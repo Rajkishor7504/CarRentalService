@@ -1,6 +1,6 @@
 ﻿@{
-        Layout = "_Layout";
-    }
+    Layout = "_Layout";
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -116,16 +116,11 @@ input[type=submit]:hover {
         .form-control.floating:valid ~ label {
             transform-origin: bottom left;
             transform: translate(1px,-85%) scale(0.80);
-          
+
         }
 
 
     </style>
-
-
-
-
-
 </head>
 <body>
     <header>
@@ -576,7 +571,8 @@ input[type=submit]:hover {
     <section style="border: 7px solid powderblue" @*class="ftco-section ftco-intro"*@>
         <div>
             <!-- Google Map Copied Code -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.1442162599346!2d85.8122470740959!3d20.294296912601336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909f1ff9e9417%3A0xea142ce789be255e!2sMo%20Car%20Self%20Drive%20Car%20%26%20bike%20rental%20service%20in%20Bhubaneswar%2COrissa!5e0!3m2!1sen!2sin!4v1695705364723!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            @*<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.1442162599346!2d85.8122470740959!3d20.294296912601336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909f1ff9e9417%3A0xea142ce789be255e!2sMo%20Car%20Self%20Drive%20Car%20%26%20bike%20rental%20service%20in%20Bhubaneswar%2COrissa!5e0!3m2!1sen!2sin!4v1695705364723!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>*@
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.5980948504875!2d85.81752697590588!3d20.35821541047007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909289b866b15%3A0x6704ef56512f715d!2sJP%20MOTORS!5e0!3m2!1sen!2sin!4v1701413263620!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
@@ -621,40 +617,50 @@ input[type=submit]:hover {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-6">
+                                <div class="form-floating col-xl-6">
                                     <div class="form-group">
                                         <div class="form-new floating">
-                                            <input type="text" class="form-control floating" id="typesofvehicleid" placeholder="Types Of Vehicle" required value="">
-                                            <label for="Type of Vehicle">Type Of Vehicle</label>
+                                            <select class="form-control floating" id="typeofvehicle" aria-label="Floating label select example">
+                                                <option selected>Type Of Vehicle</option>
+                                                <option value="1">Bike</option>
+                                                <option value="2">Car</option>
+
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xl-6">
                                     <div class="d-flex">
                                         <div class="form-group mr-2">
                                             <div class="form-new floating">
                                                 <input type="text" class="form-control floating" id="book_pick_date" placeholder="Date" required value="">
-                                                <label for="fromdate">From Date</label>
+                                                <label for="fromdate">Pick Date</label>
                                             </div>
                                         </div>
                                         <div class="form-group ml-2">
-
                                             <div class="form-new floating">
-                                                <input type="text" class="form-control floating" id="book_off_date" placeholder="Date" required value="">
-                                                <label for="todate">To Date</label>
+                                                <input type="text" class="form-control floating" id="time_pick" placeholder="Time" required value="">
+                                                <label for="fromdate">Pickup Time</label>
                                             </div>
                                         </div>
                                     </div>
 
                                 </div>
                                 <div class="col-xl-6">
-                                    <div class="form-group">
-
-                                        <div class="form-new floating">
-                                            <input type="text" class="form-control floating" id="time_pick" placeholder="Time" required value="">
-                                            <label for="receivetime">Receive Time</label>
+                                    <div class="d-flex">
+                                        <div class="form-group mr-2">
+                                            <div class="form-new floating">
+                                                <input type="text" class="form-control floating" id="book_off_date" placeholder="Date" required value="">
+                                                <label for="todate">Drop Date</label>
+                                            </div>
                                         </div>
-
+                                        <div class="form-group ml-2">
+                                            <div class="form-new floating">
+                                                <input type="text" class="form-control floating" id="datetimepicker" placeholder="Time" required value="">
+                                                <label for="todate">Drop Time</label>
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -686,7 +692,10 @@ input[type=submit]:hover {
     <script src="~/js/jquery.timepicker.min.js"></script>
     <script src="~/js/scrollax.min.js"></script>
     <script src="~/js/main.js"></script>
-    
-    
+    @*<link rel="stylesheet" type="text/css" href="/jquery.datetimepicker.css" />
+    <script src="/jquery.js"></script>
+    <script src="/build/jquery.datetimepicker.full.min.js"></script>*@
+
+
 </body>
 </html>
